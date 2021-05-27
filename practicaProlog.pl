@@ -91,7 +91,8 @@ fail.
 comptar:- asserta(comptador(0)), compta.
 comptar:- write("Hi ha "),
 comptador(X),
-write(X), write(" resultats").
+write(X), write(" resultats"),
+retractall(comptador(_)).
 
 /* Realiza todos los cálculos y suma 1 al contador cada vez que encuentra una solución */
 compta:-
